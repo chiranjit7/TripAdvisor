@@ -15,7 +15,8 @@ It is fine if your internet connection dies in between.
 It will not impact the code.
 
 Also you dont need to worry about the total pages out there for your location.
-
+Yes, another point, if your location has only 1 page means less than 30 hotels, come on !!
+do it through your eyes. Dont disturb this code.
 
 '''
 orig_stdout = sys.stdout
@@ -31,7 +32,7 @@ def hotellinst(url,k=0):
 		soup = BeautifulSoup(thepage, "html.parser")
 
 		link = soup.find_all(attrs={"class": "pageNum last taLnk "})
-		max_len= max_len = int(str(str(link[0])[43:49].split(' ')[0])[1:len(str(str(link[0])[43:49].split(' ')[0]))-1])/30 +1
+		max_len = int(str(str(link[0])[43:49].split(' ')[0])[1:len(str(str(link[0])[43:49].split(' ')[0]))-1])/30 +1
 		       
 		for j in range(2,max_len+1):
 			thepage = urllib.urlopen(url).read().decode('utf8') 
